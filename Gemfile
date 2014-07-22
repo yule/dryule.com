@@ -36,6 +36,9 @@ gem 'spring',        group: :development
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'capistrano',  '~> 3.2'
+gem 'capistrano-rails', '~> 1.1'
+
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem "twitter-bootstrap-rails"
@@ -62,10 +65,6 @@ group :development do
   gem "libnotify"
   gem "guard-livereload"
   gem "rack-livereload"
-  gem "capistrano"
-  gem "capistrano-ext"
-  gem "capistrano_colors"
-  gem "auto_tagger"
 end
 
 group :development, :test do

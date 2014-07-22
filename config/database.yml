@@ -29,7 +29,7 @@
   production:
     adapter: postgresql
     encoding: unicode
-    database: tbc
-    username: tbc
-    password: tbc
-    host: tbc
+    database: dryule_com
+    username: yule
+    password: DBPa$$wordMajsn16
+    host: localhost
