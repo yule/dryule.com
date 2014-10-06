@@ -8,5 +8,6 @@ email: paul.brennan@ahc.uk.com
 
 ![Placeholder Kitten](http://placekitten.com/g/200/300)
 
-
-    puts "Hello world"
+```ruby
+puts "Hello world"
+```
