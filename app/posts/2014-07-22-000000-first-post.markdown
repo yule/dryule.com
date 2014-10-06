@@ -6,7 +6,7 @@ email: paul.brennan@ahc.uk.com
 
 ## Hello world
 
-![Placeholder Kitten](http://placekitten.com/200/300)
+![Placeholder Kitten](http://placekitten.com/g/200/300)
 
 
     puts "Hello world"

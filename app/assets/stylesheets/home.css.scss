@@ -1,3 +1,24 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  font-family: 'Ek Mukta', Arial, sans-serif;
+  color: #333;
+}
+h1{
+  font-size: 3em;
+  color: #078781;
+}
+h2{
+  font-size: 2em;
+  color: #078781;
+}
+
+p,a,li{
+  font-size: 1em;
+}
+
+a, a:hover{
+  color: #71B086;
+  text-decoration: none;
+}
+a:hover{
+  color: #418056;
+}
