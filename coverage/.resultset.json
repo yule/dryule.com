@@ -1,0 +1,27 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/paul.brennan/work/web/dryule/app/helpers/application_helper.rb": [
+        null,
+        1,
+        null
+      ],
+      "/home/paul.brennan/work/web/dryule/app/controllers/home_controller.rb": [
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/home/paul.brennan/work/web/dryule/app/controllers/application_controller.rb": [
+        null,
+        1,
+        null,
+        null,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1457450296
+  }
+}

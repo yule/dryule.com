@@ -1,86 +1,70 @@
 source 'https://rubygems.org'
 
+# Core
+gem 'rails', '~> 4.2.0'
+gem 'pg', '~>0.16.0'
+gem 'simple-navigation', '~>3.11.0'
+gem 'devise'
+gem 'exception_notification'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-# Use SCSS for stylesheets
+# Assets
 gem 'sass-rails', '~> 4.0.3'
-gem "less-rails"
-# Use Uglifier as compressor for JavaScript assets
+gem 'less-rails'
 gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
-
-# Use jquery as the JavaScript library
+gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'jquery-ui-rails'
+gem 'haml-rails'
+gem 'bourbon'
+gem 'twitter-bootstrap-rails'
+
+# Turbolinks
 gem 'turbolinks'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-gem 'capistrano',  '~> 3.2'
-gem 'capistrano-rails', '~> 1.1'
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-gem "twitter-bootstrap-rails"
-
+# App specific
 gem 'postmarkdown'
 
-gem "pg", "~>0.16.0"
-gem "simple-navigation", "~>3.11.0"
-gem "therubyracer", platforms: :ruby
-gem "jquery-ui-rails"
-gem "haml-rails"
-gem "bourbon"
-gem "devise"
-gem "exception_notification"
 group :development do
-  gem "passenger"
-  gem "quiet_assets"
-  gem "better_errors"
-  gem "binding_of_caller"
-  gem "guard-passenger"
-  gem "guard-rspec", "~>3.0.2"
-  gem "guard-bundler"
-  gem "rb-inotify"
-  gem "libnotify"
-  gem "guard-livereload"
-  gem "rack-livereload"
+  #  Lightweight web server
+  gem 'thin'
+  # Nice errors
+  gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'shog' # color logs
+  # Guard
+  gem 'guard-bundler'
+  gem 'listen'
+  gem 'libnotify'
+  gem 'guard-livereload'
+  gem 'guard-rubocop'
+  gem 'rack-livereload'
+  gem 'guard-rails'
+  # Capistrano
+  gem 'capistrano', '~> 3.3.0', require: false
+  gem 'capistrano-passenger', '0.0.1', require: false
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
 end
 
 group :development, :test do
-  gem "rspec-rails"
-  gem "factory_girl_rails"
-  gem "reek"
+  gem 'guard-rspec'
+  gem 'rspec-rails', '~> 3.1'
+  gem 'factory_girl', '4.4.0'
+  gem 'factory_girl_rails', '4.4.1'
+  gem 'spring-commands-rspec'
+  gem 'reek', '1.6.3'
+  gem 'database_cleaner'
+  gem 'sqlite3'
 end
 
 group :test do
-  gem "spork-rails", "4.0.0"
-  gem "nyan-cat-formatter"
-  gem "capybara"
-  gem "guard-spork"
-  gem "timecop"
-  gem "shoulda"
-  gem "simplecov", ">= 0.3.8", require: false
-  gem "launchy"
-  gem "selenium-webdriver"
+  gem 'timecop'
+  gem 'simplecov', '>= 0.3.8', require: false
+  gem 'shoulda'
+  gem 'shoulda-matchers', '2.8.0', require: false
 end

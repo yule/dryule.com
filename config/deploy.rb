@@ -20,7 +20,6 @@ set :repo_url, 'git@github.com:yule/dryule.com.git'
 # set :keep_releases, 5
 
 namespace :deploy do
-
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
@@ -38,5 +37,4 @@ namespace :deploy do
       # end
     end
   end
-
 end

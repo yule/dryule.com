@@ -8,15 +8,10 @@
     host: localhost
     template: template0
 
-
   test:
-    adapter: postgresql
-    encoding: unicode
-    database: dryule_test
-    username: test
-    password: test
-    host: localhost
-    template: template0
+    adapter: sqlite3
+    database: ":memory:"
+    verbosity: quiet
 
   staging:
     adapter: postgresql

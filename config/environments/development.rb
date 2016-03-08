@@ -1,23 +1,23 @@
 Rails.application.configure do
-    require 'net/http'
+  require 'net/http'
   require 'uri'
-  livereload_local_uri = "http://localhost:35729/livereload.js"
+  livereload_local_uri = 'http://localhost:35729/livereload.js'
   uri = URI.parse(livereload_local_uri)
-  http = Net::HTTP.new(uri.host, uri.port) 
+  http = Net::HTTP.new(uri.host, uri.port)
   begin
     http.send_request('GET', uri.path)
     config.middleware.use Rack::LiveReload
   rescue
-    puts "Not using livereload - not available"
+    puts 'Not using livereload - not available'
   end
   config.generators do |g|
-      g.view_specs false
-      g.helper_specs false
+    g.view_specs false
+    g.helper_specs false
   end
 
   config.generators.helper = false
 
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
   # Settings specified here will take precedence over those in config/application.rb.
 
